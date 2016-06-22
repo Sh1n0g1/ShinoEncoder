@@ -1,3 +1,4 @@
+<?php
 /****************************************************
 ShinoEncoder
 
@@ -76,3 +77,4 @@ function shinodecode($encstr){
 	return $output;
 	
 }
+?>
