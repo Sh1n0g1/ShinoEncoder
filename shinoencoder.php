@@ -3,13 +3,13 @@
 ShinoEncoder
 
 Encode)
-       echo shinoencode('Hello')
+       echo shinoencode('Hello');
 
 Output)
        dicing scratchier effigies combine wrongers centrifugation inflator indecisiveness droopily indestructibility
 
 Decode)
-       echo shinodecode(dicing scratchier effigies combine wrongers centrifugation inflator indecisiveness droopily indestructibility)
+       echo shinodecode("dicing scratchier effigies combine wrongers centrifugation inflator indecisiveness droopily indestructibility");
 
 Output)
       Hello
