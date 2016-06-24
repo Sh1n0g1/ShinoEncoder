@@ -23,9 +23,9 @@ function shinoencode($str){
 	$output="";
 	for($i=0; $i <strlen($str); $i++){
 		$c=substr('0'.dechex(ord($str[$i])),-2,1);
-		$output=$output.delem().$dict[hexdec($c)+2][rand(0,sizeof($dict[hexdec($c)+2])-1)];
+		$output=$output.randdelem().$dict[hexdec($c)+2][rand(0,sizeof($dict[hexdec($c)+2])-1)];
 		$c=substr('0'.dechex(ord($str[$i])),-1,1);
-		$output=$output.delem().$dict[hexdec($c)+2][rand(0,sizeof($dict[hexdec($c)+2])-1)];
+		$output=$output.randdelem().$dict[hexdec($c)+2][rand(0,sizeof($dict[hexdec($c)+2])-1)];
 	}
 	return $output;
 }
@@ -76,5 +76,19 @@ function shinodecode($encstr){
 	
 	return $output;
 	
+}
+
+
+function randdelem(){
+	$i=(rand(1,100));
+	if($i < 83){
+		return ' ';
+	}elseif($i < 94){
+		return '. ';
+	}elseif($i < 98){
+		return ', ';
+	}else{
+		return '-';
+	}
 }
 ?>
