@@ -30,7 +30,7 @@
             Dim s() As String = Split(Trim(t), " ")
             Dim r As String = ""
             If s.Length Mod 2 <> 0 Then
-                Return ""
+                Return "Encode Error"
             End If
 
             For i = 0 To s.Length - 2 Step 2
