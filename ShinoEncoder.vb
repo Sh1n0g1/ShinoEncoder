@@ -1,6 +1,7 @@
   Private Function ShinoDecode(t As String) As String
 
         Try
+            'Delete Trush
             t = Replace(t, vbTab, " ")
             t = Replace(t, vbCr, " ")
             t = Replace(t, vbLf, " ")
@@ -26,12 +27,13 @@
             Do While (InStr(t, "  "))
                 t = Replace(t, "  ", " ")
             Loop
-
+            'Put each keyword into an array
             Dim s() As String = Split(Trim(t), " ")
-            Dim r As String = ""
             If s.Length Mod 2 <> 0 Then
                 Return "Encode Error"
             End If
+
+            Dim r As String = ""
 
             For i = 0 To s.Length - 2 Step 2
                 If Len(s(i)) - 2 > 16 Or Len(s(i + 1)) - 2 > 16 Then
@@ -41,9 +43,6 @@
             Next
 
             Return r
-
-
-            'Return System.Text.Encoding.UTF8.GetBytes(r)
 
         Catch ex As Exception
             InputBox("Error:", "ERROR", ex.Message & " " & t)
