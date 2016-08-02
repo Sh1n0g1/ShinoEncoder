@@ -1,4 +1,4 @@
-  Private Function DC(t As String) As String
+  Private Function ShinoDecode(t As String) As String
 
         Try
             t = Replace(t, vbTab, " ")
